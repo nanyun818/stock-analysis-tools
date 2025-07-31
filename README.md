@@ -852,7 +852,7 @@ Thanks to the following open source projects:
 - 🌐 Project Homepage: https://github.com/nanyun818/stock-analysis-tools
 - 🐛 Issue Reporting: https://github.com/nanyun818/stock-analysis-tools/issues
 - 💬 Discussions: https://github.com/nanyun818/stock-analysis-tools/discussions
-- 📧 Email: nanyun818@example.com
+- 📧 Email: 2493496427@qq.com
 
 ---
 
