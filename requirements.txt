@@ -1,0 +1,5 @@
+crawl4ai>=0.7.0
+asyncio
+playwright
+tushare>=1.2.89
+pandas

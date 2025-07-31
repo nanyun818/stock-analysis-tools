@@ -1,0 +1,7 @@
+{
+    "user": "你的华泰证券账号",
+    "password": "你的登录密码",
+    "comm_password": "你的通讯密码",
+    "trdpwd": "加密后的交易密码",
+    "account": "你的资金账号"
+}
