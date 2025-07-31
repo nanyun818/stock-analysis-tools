@@ -681,7 +681,7 @@ class MyStrategy(StrategyTemplate):
 - 🌐 项目主页：https://github.com/nanyun818/stock-analysis-tools
 - 🐛 问题反馈：https://github.com/nanyun818/stock-analysis-tools/issues
 - 💬 讨论交流：https://github.com/nanyun818/stock-analysis-tools/discussions
-- 📧 邮件联系：nanyun818@example.com
+- 📧 邮件联系：2493496427@qq.com
 
 ---
 
