@@ -294,44 +294,44 @@ class TradingStockVisualizer:
     def show_welcome_message(self):
         """显示欢迎信息"""
         welcome_text = """
-🎯 股票可视化分析与交易工具
+【目标】股票可视化分析与交易工具
 
-📊 功能特点:
+【功能特点】:
 • 实时股票行情获取与分析
 • K线图、技术指标可视化
 • 智能分析报告生成
 • 支持华泰、佣金宝等券商交易
 • 量化策略回测与实盘交易
 
-🚀 使用指南:
+【使用指南】:
 
-1️⃣ 配置交易账户
+第一步：配置交易账户
    • 选择券商类型（华泰、佣金宝等）
    • 配置对应的JSON配置文件
    • 点击"连接券商"建立连接
 
-2️⃣ 选择股票
+第二步：选择股票
    • 在搜索框输入股票代码
    • 或从热门股票列表中选择
    • 双击热门股票快速选择
 
-3️⃣ 分析股票
+第三步：分析股票
    • 查看K线图和技术指标
    • 阅读智能分析报告
    • 参考买卖建议
 
-4️⃣ 执行交易
+第四步：执行交易
    • 设置交易数量和价格
    • 点击买入或卖出按钮
    • 查看交易记录和持仓
 
-⚠️ 重要提示:
+【重要提示】:
 • 请确保已安装easytrader和easyquant
 • 交易前请仔细配置券商信息
 • 投资有风险，决策需谨慎
 • 建议先使用雪球模拟盘测试
 
-📝 配置文件说明:
+【配置文件说明】:
 • 华泰证券: 需要ht.json配置文件
 • 佣金宝: 需要yjb.json配置文件
 • 银河证券: 需要yh.json配置文件
@@ -611,33 +611,33 @@ class TradingStockVisualizer:
         
         # 生成建议
         if price_change_pct > 2:
-            suggestion = "📈 强烈看涨，建议适量买入"
+            suggestion = "【强烈看涨】建议适量买入"
         elif price_change_pct > 0:
-            suggestion = "📊 温和看涨，可考虑买入"
+            suggestion = "【温和看涨】可考虑买入"
         elif price_change_pct > -2:
-            suggestion = "⚖️ 震荡整理，建议观望"
+            suggestion = "【震荡整理】建议观望"
         else:
-            suggestion = "📉 看跌趋势，建议谨慎"
+            suggestion = "【看跌趋势】建议谨慎"
         
         analysis_text = f"""
 智能分析报告 ({self.current_stock_code})
 
-📊 基本面分析:
+【基本面分析】:
 • 当前价格: {latest['收盘']:.2f} 元
 • 价格变动: {price_change:+.2f} 元 ({price_change_pct:+.2f}%)
 • 成交量: {latest['成交量']:,.0f} 手
 • 换手率: {latest['换手率']:.2f}%
 
-📈 技术面分析:
+【技术面分析】:
 • 波动率: {volatility:.2f}%
 • 最高价: {latest['最高']:.2f} 元
 • 最低价: {latest['最低']:.2f} 元
 • 振幅: {((latest['最高'] - latest['最低']) / prev['收盘'] * 100):.2f}%
 
-💡 投资建议:
+【投资建议】:
 {suggestion}
 
-⚠️ 风险提示:
+【风险提示】:
 • 股市有风险，投资需谨慎
 • 本分析仅供参考，不构成投资建议
 • 请结合自身风险承受能力做出投资决策

@@ -329,7 +329,7 @@ class RealTimeStockVisualizer:
             result['advice'] = "技术指标综合显示中性信号，建议观望"
         
         # 风险提示
-        result['risk_warning'] = "⚠️ 风险提示：股市有风险，投资需谨慎。本分析仅供参考，不构成投资建议。"
+        result['risk_warning'] = "【风险提示】：股市有风险，投资需谨慎。本分析仅供参考，不构成投资建议。"
         
         return result
     

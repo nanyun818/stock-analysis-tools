@@ -439,7 +439,7 @@ class BeautifulStockVisualizerGUI:
         """初始化美化版GUI界面"""
         self.visualizer = BeautifulStockVisualizer()
         self.root = tk.Tk()
-        self.root.title("🚀 股票可视化分析工具")
+        self.root.title("【股票可视化分析工具】"
         self.root.geometry("1400x900")
         self.root.configure(bg='#f0f0f0')
         
@@ -548,7 +548,7 @@ class BeautifulStockVisualizerGUI:
         
         # 标题
         title_label = tk.Label(header_frame, 
-                              text="🚀 股票可视化分析工具",
+                              text="【股票可视化分析工具】",
                               font=('Microsoft YaHei', 20, 'bold'),
                               fg='white',
                               bg=self.colors['primary'])
@@ -623,14 +623,14 @@ class BeautifulStockVisualizerGUI:
         self.source_var = tk.StringVar(value='auto')
         # 数据源选项和说明
         source_options = [
-            ('auto', '🔄 自动选择 (推荐)'),
-            ('akshare', '📊 AKShare (主要数据源)')
+            ('auto', '【自动选择】(推荐)'),
+            ('akshare', '【AKShare】(主要数据源)')
         ]
         
         # 添加其他可用数据源
         for src in self.visualizer.available_sources:
             if src != 'akshare':
-                source_options.append((src, f"📊 {src}"))
+                source_options.append((src, f"【{src}】"))
         
         sources = source_options
         
@@ -649,7 +649,7 @@ class BeautifulStockVisualizerGUI:
         info_frame = tk.Frame(content_frame, bg=self.colors['light'], relief='solid', borderwidth=1)
         info_frame.pack(fill=tk.X, pady=(10, 0))
         
-        info_text = """💡 数据源说明:
+        info_text = """【数据源说明】:
 • 自动选择: 系统自动选择最佳可用数据源
 • AKShare: 主要免费数据源，功能最完整
 • 其他源: 备用数据源，提供基础数据"""
@@ -720,7 +720,7 @@ class BeautifulStockVisualizerGUI:
         title_frame.pack_propagate(False)
         
         title_label = tk.Label(title_frame,
-                              text="🔥 当日热门股票",
+                              text="【当日热门股票】",
                               font=('Microsoft YaHei', 12, 'bold'),
                               fg='white',
                               bg=self.colors['danger'])
@@ -728,7 +728,7 @@ class BeautifulStockVisualizerGUI:
         
         # 刷新按钮
         refresh_btn = tk.Button(title_frame,
-                               text="🔄",
+                               text="【刷新】",
                                font=('Microsoft YaHei', 10),
                                bg=self.colors['danger'],
                                fg='white',
@@ -778,7 +778,7 @@ class BeautifulStockVisualizerGUI:
         title_frame.pack_propagate(False)
         
         title_label = tk.Label(title_frame,
-                              text="⚙️ 操作控制",
+                              text="【操作控制】",
                               font=('Microsoft YaHei', 12, 'bold'),
                               fg='white',
                               bg=self.colors['info'])
@@ -798,7 +798,7 @@ class BeautifulStockVisualizerGUI:
         
         # 刷新列表按钮
         refresh_btn = tk.Button(content_frame,
-                               text="📊 刷新股票列表",
+                               text="【刷新股票列表】",
                                bg=self.colors['success'],
                                fg='white',
                                command=self.refresh_stock_list,
@@ -807,7 +807,7 @@ class BeautifulStockVisualizerGUI:
         
         # 自动更新按钮
         self.auto_update_btn = tk.Button(content_frame,
-                                        text="🔄 开始自动更新",
+                                        text="【开始自动更新】",
                                         bg=self.colors['primary'],
                                         fg='white',
                                         command=self.toggle_auto_update,
@@ -843,7 +843,7 @@ class BeautifulStockVisualizerGUI:
     def create_overview_tab(self):
         """创建股票概览标签页"""
         self.overview_frame = tk.Frame(self.notebook, bg=self.colors['background'])
-        self.notebook.add(self.overview_frame, text="📈 股票概览")
+        self.notebook.add(self.overview_frame, text="【股票概览】")
         
         # 创建滚动区域
         canvas = tk.Canvas(self.overview_frame, bg=self.colors['background'])
@@ -864,17 +864,17 @@ class BeautifulStockVisualizerGUI:
     def create_chart_tab(self):
         """创建K线图标签页"""
         self.chart_frame = tk.Frame(self.notebook, bg=self.colors['background'])
-        self.notebook.add(self.chart_frame, text="📊 K线图")
+        self.notebook.add(self.chart_frame, text="【K线图】")
     
     def create_indicators_tab(self):
         """创建技术指标标签页"""
         self.indicators_frame = tk.Frame(self.notebook, bg=self.colors['background'])
-        self.notebook.add(self.indicators_frame, text="📉 技术指标")
+        self.notebook.add(self.indicators_frame, text="【技术指标】")
     
     def create_analysis_tab(self):
         """创建分析报告标签页"""
         self.analysis_frame = tk.Frame(self.notebook, bg=self.colors['background'])
-        self.notebook.add(self.analysis_frame, text="📋 分析报告")
+        self.notebook.add(self.analysis_frame, text="【分析报告】")
         
         self.analysis_text = scrolledtext.ScrolledText(self.analysis_frame, 
                                                       wrap=tk.WORD,
@@ -898,7 +898,7 @@ class BeautifulStockVisualizerGUI:
         title_frame.pack_propagate(False)
         
         title_label = tk.Label(title_frame,
-                              text="🎉 欢迎使用股票可视化分析工具",
+                              text="【欢迎】欢迎使用股票可视化分析工具",
                               font=('Microsoft YaHei', 16, 'bold'),
                               fg='white',
                               bg=self.colors['primary'])
@@ -909,7 +909,7 @@ class BeautifulStockVisualizerGUI:
         content_frame.pack(fill=tk.X, padx=20, pady=20)
         
         welcome_text = f"""
-🚀 功能特点：
+【功能特点】：
 • 完全免费，无需API密钥
 • 支持多个数据源：{', '.join(self.visualizer.available_sources) if self.visualizer.available_sources else '无'}
 • 实时股票数据和K线图
@@ -917,7 +917,7 @@ class BeautifulStockVisualizerGUI:
 • 智能投资建议
 • 当日热门股票推荐
 
-📖 详细使用指南：
+【详细使用指南】：
 
 【第一步：获取股票数据】
 • 点击"刷新热门股票"按钮获取当日热门榜单
@@ -930,28 +930,28 @@ class BeautifulStockVisualizerGUI:
 
 【第三步：查看分析结果】
 选择股票后，右侧会显示4个标签页：
-• 📈 股票概览：基本信息、实时价格、关键指标
-• 📊 K线图：价格走势图表，包含移动平均线
-• 📉 技术指标：MACD、KDJ、BOLL、RSI等专业指标
-• 📋 分析报告：AI智能分析和具体投资建议
+• 股票概览：基本信息、实时价格、关键指标
+• K线图：价格走势图表，包含移动平均线
+• 技术指标：MACD、KDJ、BOLL、RSI等专业指标
+• 分析报告：AI智能分析和具体投资建议
 
 【第四步：深度分析】
 • K线图显示价格趋势和支撑阻力位
 • 技术指标帮助判断买卖时机
 • 分析报告提供具体的操作建议
 
-💡 快速体验：
+【快速体验】：
 建议先点击热门股票中的"平安银行"或"万科A"，
 然后依次查看各个标签页，体验完整功能！
 
-💡 关于"无法获取"：
+【关于"无法获取"】：
 • 网络连接问题：检查网络是否正常
 • 数据源限制：免费数据源可能有访问限制
 • 股票代码错误：请输入正确的6位股票代码
 • 交易时间：非交易时间可能无法获取实时数据
 • 遇到问题时，工具会自动使用演示数据
 
-⚠️ 风险提示：
+【风险提示】：
 • 本工具提供的分析仅供参考，不构成投资建议
 • 投资有风险，决策需谨慎
 • 建议结合多种分析方法进行综合判断
@@ -1100,7 +1100,7 @@ class BeautifulStockVisualizerGUI:
         title_frame.pack(fill=tk.X)
         title_frame.pack_propagate(False)
         
-        title_text = f"📊 {stock_code}"
+        title_text = f"【{stock_code}】"
         if realtime_data:
             title_text += f" - {realtime_data.get('name', 'N/A')}"
         
@@ -1186,7 +1186,7 @@ class BeautifulStockVisualizerGUI:
         title_frame.pack_propagate(False)
         
         title_label = tk.Label(title_frame,
-                              text="📈 技术指标",
+                              text="【技术指标】",
                               font=('Microsoft YaHei', 12, 'bold'),
                               fg='white',
                               bg=self.colors['secondary'])
@@ -1256,7 +1256,7 @@ class BeautifulStockVisualizerGUI:
         overall_frame.pack(fill=tk.X, pady=(0, 10))
         
         tk.Label(overall_frame,
-                text=f"💡 {analysis.get('overall', 'N/A')}",
+                text=f"【综合评价】 {analysis.get('overall', 'N/A')}",
                 font=('Microsoft YaHei', 14, 'bold'),
                 fg='white',
                 bg=analysis.get('overall_color', '#888888')).pack(pady=10)
@@ -1347,33 +1347,33 @@ class BeautifulStockVisualizerGUI:
         
         # 生成分析报告
         report = f"""
-📊 股票分析报告
+【股票分析报告】
 {'='*50}
 
-📈 趋势分析
+【趋势分析】
 {'-'*30}
 状态: {analysis.get('trend', 'N/A')}
 建议: {analysis.get('trend_advice', 'N/A')}
 
-📉 MACD分析
+【MACD分析】
 {'-'*30}
 状态: {analysis.get('macd', 'N/A')}
 建议: {analysis.get('macd_advice', 'N/A')}
 
-🎯 综合评价
+【综合评价】
 {'-'*30}
 评分: {analysis.get('score', 50)}/100
 结论: {analysis.get('overall', 'N/A')}
 建议: {analysis.get('overall_advice', 'N/A')}
 
-⚠️ 风险提示
+【风险提示】
 {'-'*30}
 • 本分析仅供参考，不构成投资建议
 • 股市有风险，投资需谨慎
 • 建议结合多种分析方法进行决策
 • 请根据自身风险承受能力进行投资
 
-📅 报告生成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+【报告生成时间】: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
         """
         
         self.analysis_text.insert(tk.END, report)
@@ -1392,7 +1392,7 @@ class BeautifulStockVisualizerGUI:
             return
         
         self.visualizer.is_updating = True
-        self.auto_update_btn.config(text="⏸️ 停止自动更新", bg=self.colors['warning'])
+        self.auto_update_btn.config(text="【停止自动更新】", bg=self.colors['warning'])
         self.status_label.config(text="状态: 自动更新中...", fg=self.colors['info'])
         
         def update_worker():
@@ -1411,7 +1411,7 @@ class BeautifulStockVisualizerGUI:
     def stop_auto_update(self):
         """停止自动更新"""
         self.visualizer.is_updating = False
-        self.auto_update_btn.config(text="🔄 开始自动更新", bg=self.colors['primary'])
+        self.auto_update_btn.config(text="【开始自动更新】", bg=self.colors['primary'])
         self.status_label.config(text="状态: 已停止自动更新", fg=self.colors['success'])
     
     def run(self):
@@ -1424,7 +1424,7 @@ class BeautifulStockVisualizerGUI:
 
 def main():
     """主函数"""
-    print("🚀 启动股票可视化分析工具...")
+    print("【启动股票可视化分析工具】...")
     
     # 检查数据源
     available_sources = []
