@@ -1,19 +1,30 @@
 <div align="center">
 
-# 📈 股票分析与交易工具集
+# 📈 股票分析与交易工具集 / Stock Analysis & Trading Tools
 
 <img src="https://img.shields.io/badge/Python-3.7+-blue.svg" alt="Python Version">
 <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
 <img src="https://img.shields.io/badge/Platform-Windows-lightgrey.svg" alt="Platform">
 <img src="https://img.shields.io/badge/Status-Active-brightgreen.svg" alt="Status">
 
-**🚀 一个功能完整的股票数据分析、可视化和程序化交易工具集**
+**🚀 一个功能完整的股票数据分析、可视化和程序化交易工具集**  
+**🚀 A comprehensive stock data analysis, visualization and algorithmic trading toolkit**
 
-*支持多种数据源和券商接口，从数据分析到实盘交易的一站式解决方案*
+*支持多种数据源和券商接口，从数据分析到实盘交易的一站式解决方案*  
+*Supporting multiple data sources and broker interfaces, a one-stop solution from data analysis to live trading*
+
+**语言选择 / Language Selection:**  
+[🇨🇳 中文版本](#中文版本) • [🇺🇸 English Version](#english-version)
+
+---
 
 [快速开始](#-快速开始) • [功能特色](#-项目特色) • [使用指南](#-使用指南) • [API文档](#-高级功能) • [贡献指南](#-贡献指南)
 
 </div>
+
+---
+
+## 中文版本
 
 ---
 
@@ -675,3 +686,174 @@ class MyStrategy(StrategyTemplate):
 ---
 
 **免责声明**：本工具仅供学习和研究使用，使用者需自行承担投资风险。开发者不对任何投资损失承担责任。
+
+---
+
+## English Version
+
+<div align="center">
+
+# 📈 Stock Analysis & Trading Tools
+
+**🚀 A comprehensive stock data analysis, visualization and algorithmic trading toolkit**
+
+*Supporting multiple data sources and broker interfaces, a one-stop solution from data analysis to live trading*
+
+[Quick Start](#-quick-start-en) • [Key Features](#-key-features-en) • [Usage Guide](#-usage-guide-en) • [Advanced Features](#-advanced-features-en) • [Contributing](#-contributing-en)
+
+</div>
+
+## 🎯 Key Features {#-key-features-en}
+
+| Category | Features | Description |
+|----------|----------|-------------|
+| **📊 Data Analysis** | Multi-source Data | Support AKShare, TuShare, and web scraping |
+| | Real-time Visualization | Beautiful stock charts and technical indicators |
+| | Technical Analysis | MA, MACD, RSI, Bollinger Bands, etc. |
+| | Data Export | Excel and CSV format support |
+| **💼 Trading** | Multi-broker Support | Huatai, YJB, Galaxy, Xueqiu, etc. |
+| | Algorithmic Trading | Automated order execution and risk control |
+| | Strategy Framework | Based on easyquant quantitative strategies |
+| | Paper Trading | Xueqiu simulation for practice |
+| **🛠️ Tools** | GUI Interface | User-friendly graphical interface |
+| | Configuration Helper | One-click broker setup |
+| | One-click Deployment | Complete installation scripts |
+| | Comprehensive Documentation | From beginner to advanced guides |
+
+## 🚀 Quick Start {#-quick-start-en}
+
+### Requirements
+- Python 3.7+
+- Windows 10/11 (recommended)
+- Internet connection
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/nanyun818/stock-analysis-tools.git
+   cd stock-analysis-tools
+   ```
+
+2. **Install dependencies**
+   ```bash
+   # Double-click to run
+   安装依赖.bat
+   
+   # Or install via command line
+   pip install -r requirements.txt
+   ```
+
+3. **Launch tools**
+   - Free version: Double-click `启动免费股票工具.bat`
+   - Beautiful version: Double-click `启动美化版股票工具.bat`
+   - Trading version: Double-click `启动交易工具.bat`
+   - Configuration helper: Double-click `启动配置助手.bat`
+
+## 📊 Tool Modules {#-tool-modules-en}
+
+### Stock Analysis Tools
+
+| Tool Version | Features | Use Case | Rating |
+|-------------|----------|----------|--------|
+| 🆓 **Free Version** | Basic analysis, no configuration needed | Beginners, quick viewing | ⭐⭐⭐⭐ |
+| 🎨 **Beautiful Version** | Modern UI, multiple chart types | Daily analysis, professional presentation | ⭐⭐⭐⭐⭐ |
+| 💼 **Trading Version** | Live trading, strategy backtesting | Algorithmic trading, quantitative investment | ⭐⭐⭐⭐⭐ |
+| ⏰ **Real-time Version** | Real-time monitoring, alerts | Market watching, risk control | ⭐⭐⭐⭐ |
+
+### Supported Brokers
+
+| Broker | Features | Status |
+|--------|----------|--------|
+| **🏛️ Huatai Securities** | Encrypted password, mobile verification | ✅ Supported |
+| **💳 YJB** | Web trading, real-time quotes | ✅ Supported |
+| **🌌 Galaxy Securities** | Client trading, professional tools | ✅ Supported |
+| **❄️ Xueqiu Simulation** | Paper trading, beginner-friendly | ✅ Supported |
+
+## 📚 Usage Guide {#-usage-guide-en}
+
+### Learning Path for Beginners
+
+| Stage | Focus | Duration | Tools |
+|-------|-------|----------|-------|
+| **🆓 Step 1: Free Experience** | Basic concepts | 30 minutes | Free Stock Tool |
+| **🎨 Step 2: Enhanced Analysis** | Technical analysis | 1 hour | Beautiful Stock Tool |
+| **🎮 Step 3: Paper Trading** | Trading practice | 1 week | Simulation Trading |
+| **💼 Step 4: Live Trading** | Real trading | Ongoing | Full Trading Platform |
+
+## 🔧 Advanced Features {#-advanced-features-en}
+
+### Custom Strategy Development
+```python
+# Based on strategy_example.py
+from easyquant import StrategyTemplate
+
+class MyStrategy(StrategyTemplate):
+    def strategy(self, event):
+        # Implement your trading logic
+        pass
+```
+
+### Data Source Extension
+- Support for adding new data sources
+- Modify corresponding visualization tools
+- Add data acquisition interfaces
+- Update configuration files
+
+### Broker Interface Extension
+Based on the easytrader framework, support for more brokers can be extended.
+
+## 📊 Technology Stack
+
+- **Data Acquisition**: AKShare, Tushare, easyquotation
+- **Data Processing**: Pandas, NumPy
+- **Visualization**: Matplotlib, Tkinter
+- **Trading Interface**: easytrader, easyquant
+- **Network Requests**: Requests, urllib
+- **Data Parsing**: BeautifulSoup, lxml
+
+## ⚠️ Important Disclaimers
+
+### Security Notes
+1. **Configuration Security** - Keep configuration files secure, don't upload real configs to public repositories
+2. **Network Security** - Use secure network environments, avoid public WiFi for trading
+3. **Fund Security** - Test with simulation first, set reasonable stop-loss, don't invest more than you can afford
+
+### Investment Risk Warning
+- Stock market involves risks, invest cautiously
+- Algorithmic trading does not guarantee profits
+- Please invest according to your risk tolerance
+- Consult professional investment advisors
+
+## 🤝 Contributing {#-contributing-en}
+
+Welcome to submit Issues and Pull Requests!
+
+1. Fork this project
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+Thanks to the following open source projects:
+- [AKShare](https://github.com/akfamily/akshare) - Free stock data
+- [easytrader](https://github.com/shidenggui/easytrader) - Algorithmic trading
+- [easyquant](https://github.com/shidenggui/easyquant) - Quantitative trading framework
+- [Tushare](https://github.com/waditu/tushare) - Financial data interface
+
+## 📞 Contact
+
+- 🌐 Project Homepage: https://github.com/nanyun818/stock-analysis-tools
+- 🐛 Issue Reporting: https://github.com/nanyun818/stock-analysis-tools/issues
+- 💬 Discussions: https://github.com/nanyun818/stock-analysis-tools/discussions
+- 📧 Email: nanyun818@example.com
+
+---
+
+**Disclaimer**: This tool is for educational and research purposes only. Users are responsible for their own investment risks. Developers are not liable for any investment losses.
